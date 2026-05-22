@@ -12,24 +12,24 @@ def toggle_theme():
     
     # Define the two color palettes
     if is_dark_mode:
-        app_bg = "#1E272E"        # Dark charcoal background
-        text_fg = "#D2DAE2"       # Light gray text
-        title_fg = "#4BCFFA"      # Neon blue for headers
-        total_bg = "#2C3A47"      # Darker blue-gray for the total box
-        theme_btn_bg = "#F39C12"  # Orange for the theme button
-        util_bg = "#8E44AD"       # Deep purple for utility buttons
+        app_bg = "#1E272E"        
+        text_fg = "#D2DAE2"       
+        title_fg = "#4BCFFA"      
+        total_bg = "#2C3A47"      
+        theme_btn_bg = "#F39C12"  
+        util_bg = "#8E44AD"       
     else:
-        app_bg = "#F4F6F9"        # Soft light gray-blue for whole app
-        text_fg = "#2C3E50"       # Dark slate gray for readable text
-        title_fg = "#00509E"      # Deep professional blue for main title
-        total_bg = "#D6EAF8"      # Highlight blue for total entry box
-        theme_btn_bg = "#34495E"  # Dark gray for the theme button
-        util_bg = "#9B59B6"       # Lighter purple for utility buttons
+        app_bg = "#F4F6F9"        
+        text_fg = "#2C3E50"       
+        title_fg = "#00509E"      
+        total_bg = "#D6EAF8"     
+        theme_btn_bg = "#34495E" 
+        util_bg = "#9B59B6"       
 
     # Update main window
     frame.configure(background=app_bg)
     
-    # Update all Frames (Added f_buttons_extra here!)
+    # Update all Frames 
     frames = [f_name, f_units, f_year, f_fees, f_fee1, f_fee2, f_fee3, 
               f_scholar_lbl, f_scholar, f_total, f_buttons, f_buttons_extra]
     for f in frames:
@@ -343,7 +343,6 @@ b_compute.pack(side="left", padx=10)
 b_clear.pack(side="left", padx=10)
 b_theme.pack(side="left", padx=10) 
 
-# Pack the new extra buttons frame right below the main ones
 f_buttons_extra.pack(pady=(5, 20))
 b_receipt.pack(side="left", padx=10)
 b_save.pack(side="left", padx=10)
